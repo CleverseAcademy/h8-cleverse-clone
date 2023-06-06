@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -79,22 +83,6 @@
   margin: 0;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -104,4 +92,135 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/fonts/Montserrat-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/fonts/Montserrat-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/fonts/Montserrat-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-display: swap
+}
+
+@font-face {
+  font-family: FC Minimal;
+  src: url(/fonts/FC-Minimal-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-display: swap
+}
+
+@font-face {
+  font-family: FC Minimal;
+  src: url(/fonts/FC-Minimal-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-BlackIt.ttf) format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-Black.ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-BoldIt.ttf) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-ExtraLightIt.ttf) format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-It.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-ExtraLight.ttf) format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-LightIt.ttf) format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-SemiBoldIt.ttf) format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url(/fonts/SourceSerifPro-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap
 }
