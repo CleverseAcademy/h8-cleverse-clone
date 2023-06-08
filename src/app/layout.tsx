@@ -1,5 +1,9 @@
-import './globals.css'
+import dayjs from 'dayjs'
 import { Inter } from 'next/font/google'
+import './globals.css'
+var localizedFormat = require('dayjs/plugin/localizedFormat')
+
+dayjs.extend(localizedFormat)
 
 const inter = Inter({ subsets: ['latin'] })
 

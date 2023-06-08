@@ -1,22 +1,4 @@
-import { FC } from 'react'
+import BlogBrief from './BlogBrief'
+import BlogWithImage from './BlogWithImage'
 
-export interface IBlogProps {
-  author: string
-  createdAt: Date
-  readingTimeSec: number
-  title: string
-  description: string
-  tags: string[]
-  image?: string
-}
-
-const Blog: FC<IBlogProps> = ({ author, createdAt }) => (
-  <div>
-    <div className="flex flex-row text-xs gap-2">
-      <p className="font-semibold text-highlight">{author}</p>
-      <p className="text-description">{createdAt.toString()}</p>
-    </div>
-  </div>
-)
-
-export default Blog
+export { BlogBrief, BlogWithImage }
