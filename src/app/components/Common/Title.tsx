@@ -1,15 +1,31 @@
 import { FC, ReactNode } from 'react'
 
-export interface ITitleProps {
+export enum TitleSize {
+  Huge,
+  Normal,
+}
+
+interface ITextProps {
   children: ReactNode
 }
-export const BigTitle: FC<ITitleProps> = ({ children }) => (
+export interface ITitleProps extends ITextProps {
+  size: TitleSize
+}
+
+const BigTitle: FC<ITextProps> = ({ children }) => (
   <h1 className="font-bold text-title leading-[2.7rem] text-primaryHeader">
     {children}
   </h1>
 )
-export const MediumTitle: FC<ITitleProps> = ({ children }) => (
+const MediumTitle: FC<ITextProps> = ({ children }) => (
   <a className="font-bold text-title leading-7 text-secondaryHeader">
     {children}
   </a>
 )
+
+export const ArticleTitle: FC<ITitleProps> = ({ children, size }) =>
+  size === TitleSize.Huge ? (
+    <BigTitle>{children}</BigTitle>
+  ) : (
+    <MediumTitle>{children}</MediumTitle>
+  )

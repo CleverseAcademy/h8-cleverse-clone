@@ -1,11 +1,11 @@
 import { Blog } from '@/app/api/blogs/route'
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 import { Info } from '../Common/Info'
-import { MediumTitle } from '../Common/Title'
+import { ArticleTitle, TitleSize } from '../Common/Title'
 import TagGroup from '../Tag'
 
 export interface IBlogBriefProps extends Omit<Blog, 'image'> {
-  readonly TitleComponent?: FC<{ children: ReactNode }>
+  titleSize?: TitleSize
 }
 const BlogBrief: FC<IBlogBriefProps> = ({
   title,
@@ -14,12 +14,12 @@ const BlogBrief: FC<IBlogBriefProps> = ({
   author,
   createdAt,
   readingTimeSec,
-  TitleComponent: Title = MediumTitle,
+  titleSize = TitleSize.Normal,
 }) => (
   <div className="flex flex-col w-full gap-2 max-w-lg">
     <Info {...{ author, createdAt, readingTimeSec }} />
     <div className="flex flex-col gap-2 font-fcMinimal">
-      <Title>{title}</Title>
+      <ArticleTitle size={titleSize}>{title}</ArticleTitle>
       <div className="text-lg leading-5 text-description">{description}</div>
     </div>
     <TagGroup tags={tags} />
